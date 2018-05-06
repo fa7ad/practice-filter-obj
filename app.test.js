@@ -1,6 +1,6 @@
 import test from 'ava'
 import * as R from 'ramda'
-import { filterObj } from './app.js'
+import { filterObjSimple, filterObjComplicated } from './app.js'
 
 const fruits = {
   orange: {
@@ -31,7 +31,11 @@ const sweetFruits = {
 const isSweet = fruit => fruit.sweet
 
 test('Using a bunch of map, filter, reduces', t => {
-  t.deepEqual(filterObj(isSweet, fruits), sweetFruits)
+  t.deepEqual(filterObjComplicated(isSweet, fruits), sweetFruits)
+})
+
+test('Using a single reduce', t => {
+  t.deepEqual(filterObjSimple(isSweet, fruits), sweetFruits)
 })
 
 test('Using Ramda: R.filter', t => {
