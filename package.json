@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": "git@github.com:fa7ad/practice-filter-obj.git",
   "devDependencies": {
-    "ava": "^3.2.0"
+    "ava": "^3.5.0"
   },
   "scripts": {
     "test": "ava --verbose"
